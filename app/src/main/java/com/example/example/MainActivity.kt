@@ -115,9 +115,9 @@ fun MainActivityScreen() {
 fun Header() {
     ConstraintLayout(
         modifier =
-            Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
+        Modifier
+            .fillMaxWidth()
+            .padding(8.dp),
     ) {
         val (imgBack, imgAvata, tvUserName, tvPhoneAndAddress, tvGenderAndAge) = createRefs()
         val greenColor = colorResource(id = R.color.green)
@@ -126,13 +126,13 @@ fun Header() {
             contentDescription = "icon back",
             tint = greenColor,
             modifier =
-                Modifier
-                    .size(50.dp)
-                    .constrainAs(imgBack) {
-                        start.linkTo(parent.start)
-                        top.linkTo(parent.top)
-                        bottom.linkTo(imgAvata.bottom)
-                    },
+            Modifier
+                .size(50.dp)
+                .constrainAs(imgBack) {
+                    start.linkTo(parent.start)
+                    top.linkTo(parent.top)
+                    bottom.linkTo(imgAvata.bottom)
+                },
         )
 
         Image(
@@ -149,7 +149,6 @@ fun Header() {
         )
 
         val sizeIcon = dimensionResource(id = R.dimen.define_dimen_24)
-
         Row(
             modifier =
                 Modifier
@@ -387,7 +386,7 @@ private fun TabLayout() {
                             Text(
                                 text = tabItem,
                                 color = if (selected) Color.Black else Color.Gray,
-                                fontSize = getNormalTextSize(),
+                                fontSize = 14.sp,
                             )
                             if (tvQuantity > 1) {
                                 Box(
@@ -401,7 +400,7 @@ private fun TabLayout() {
                                     Text(
                                         text = tvQuantity.toString(),
                                         color = Color.White,
-                                        fontSize = 12.sp,
+                                        fontSize = 10.sp,
                                         modifier = Modifier.align(Alignment.Center),
                                     )
                                 }
